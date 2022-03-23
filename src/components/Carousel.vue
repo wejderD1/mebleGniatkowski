@@ -11,7 +11,7 @@
       />
       <div class="description-slider">
         <a
-          href=""
+          href="/gallery/:id"
           class="slider-title">system adaś
         </a>
       </div>
@@ -26,7 +26,7 @@
       />
       <div class="description-slider">
         <a
-          href=""
+          href="/gallery/:id"
           class="slider-title">system astor
         </a>
       </div>
@@ -71,7 +71,7 @@
       />
       <div class="description-slider">
         <a
-          href=""
+          href="/gallery/:id/szafy_przesuwne"
           class="slider-title">szafy przesuwne
         </a>
       </div>
@@ -86,14 +86,14 @@
       />
       <div class="description-slider">
         <a
-          href=""
+          href="/gallery/:id/szafy_przesuwne"
           class="slider-title">szafy przesuwne
         </a>
       </div>
     </div>
         <!-- SLiders controll buttons -->
     <div class="slider-controls position-left">
-      <b-icon-arrow-left class="arrow arrow-left" @click="plusSlides(-1)"></b-icon-arrow-left>
+      <b-icon-arrow-left class="arrow arrow-left" @click="minusSlides(1)"></b-icon-arrow-left>
     </div>
     <div class="slider-controls position-right">
       <b-icon-arrow-right class="arrow arrow-right" @click="plusSlides(1)"></b-icon-arrow-right>
@@ -153,11 +153,15 @@ export default {
 
     plusSlides (n) {
       this.showSlides(this.sliderIndex += 1)
+    },
+
+    minusSlides (n) {
+      this.showSlides(this.sliderIndex -= 1)
     }
   },
   mounted () {
     this.showSlides(this.sliderIndex)
-  //   setTimeout(this.showSlides(this.plusSlides(this.sliderIndex + 1)), 2000)
+    // setTimeout(this.showSlides(this.plusSlides(this.sliderIndex + 1)), 2000)
   }
 }
 </script>

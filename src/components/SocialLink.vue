@@ -1,5 +1,5 @@
 <template>
-  <a href="http://facebook.com" target="_blank">
+  <a href="http://facebook.com/Meble-Gniatkowski-110074451602036/?tsid=0.7106689355161742&source=result" target="_blank">
     <b-icon-facebook
       class="social-link rounded-circle"
       v-bind:class="className">

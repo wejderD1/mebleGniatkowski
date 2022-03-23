@@ -21,8 +21,8 @@ export default {
     Submenu
   },
   methods: {
-    transmit (files) {
-      this.searchImg = files.fName
+    transmit (photos) {
+      this.searchImg = photos.item
     }
   }
 }

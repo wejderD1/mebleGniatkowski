@@ -5,8 +5,8 @@
       <img class="logo col-2" src="./assets/g-logo.png" alt="logo" />
       <div class="contact-wrapper">
         <SocialLink className="social-link_small"/>
-        <p>tel: 222-222-222</p>
-        <p>e-mail: daniel@gmail.com</p>
+        <p>tel: 510-416-197</p>
+        <!-- <p>e-mail: daniel@gmail.com</p> -->
       </div>
       <Menu/>
     </div>

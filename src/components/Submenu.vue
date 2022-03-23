@@ -9,7 +9,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="gallery-items-link" to="/gallery/:id/kuchnie _zabudowy">
+        <router-link class="gallery-items-link" to="/gallery/:id/kuchnie_zabudowy">
           kuchnie zabudowy
         </router-link>
       </li>

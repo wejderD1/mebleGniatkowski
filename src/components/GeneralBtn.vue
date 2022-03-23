@@ -10,9 +10,9 @@
   font-size: .8rem;
   width: 100px;
   height: 35px;
-  border: 2px solid $main-color;
+  border: 2px solid #aa6a16;
   color: $main-text-color;
-  background: $main-color;
+  background: $subtext-color;
   border-radius: 8px;
   text-transform: uppercase;
 
@@ -20,6 +20,6 @@
 }
 .gen-btn:hover{
     background: transparent;
-    color: $main-color;
+    color: $subtext-color;
   }
 </style>

@@ -25,7 +25,7 @@ const routes = [
         component: () => import('../views/MebleSystemowe.vue')
       },
       {
-        path: 'kuchnie _zabudowy',
+        path: 'kuchnie_zabudowy',
         name: 'kuchnieZabudowy',
         component: () => import('../views/KuchnieZabudowy.vue')
       },

@@ -2,16 +2,12 @@
   <div>
     <div class="gallery-wrapper" v-if="isFull">
       <div
-        v-for="(item, index) of files"
+        v-for="(item, index) of photos"
         class="gallery-container"
-        :key="{index}"
+        :key="index"
         @click="fullToggle(index)">
-        <img
-          v-for="(i, index) in item.fName"
-          :src="require(`../img/szafy/${i.name}-min.jpg`)"
-          alt="meble"
-          :key="index">
-        <h2 class="gallery-items-title">Szafa Tania{{index+1}}</h2>
+        <GalleryItems :arr="photos[index]" folder="szafy" />
+        <!-- <h2 class="gallery-items-title">Szafa Tania{{index}}</h2> -->
       </div>
     </div>
     <div
@@ -22,78 +18,88 @@
           :key="index"
           :src="require(`../img/szafy/${i.name}.jpg`)"
           alt="meble">
-        <button class="btn btn-primary prew-btn">
-          <b-icon-arrow-left @click="fullToggle"></b-icon-arrow-left>
-          wsteć
-        </button>
+        <Button :function="fullToggle" />
     </div>
   </div>
 </template>
 
 <script>
+import Button from '../components/Button.vue'
+import GalleryItems from '../components/GalleryItems.vue'
+
 export default {
   props: ['searchImg'],
+  components: {
+    Button,
+    GalleryItems
+  },
   data () {
     return {
       isFull: true,
-      files: [
+      photos: [
         {
-          fName: [
+          item: [
+            { name: '261084150_1129672717573695_3573815831858801343_n' },
+            { name: '261270240_1129672847573682_6491834688290733315_n' }
+          ]
+        },
+        {
+          item: [
             { name: '01_1435529833' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '02_1435529874' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '03_1435529918' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '04_1435529968' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '05_1435529997' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '06_1435530022' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '07_1435530062' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '08_1435530095' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '09_1435530130' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '10_1435530173' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '11_1435530240' }
           ]
         },
         {
-          fName: [
+          item: [
             { name: '12_1435530279' }
           ]
         }
@@ -103,15 +109,8 @@ export default {
   methods: {
     fullToggle (i) {
       this.isFull = !this.isFull
-      this.$emit('transmitInfo', this.files[i])
+      this.$emit('transmitInfo', this.photos[i])
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.szafy-wrapper{
-  display: flex;
-  justify-content: center;
-}
-</style>
